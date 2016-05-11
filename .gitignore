@@ -1,0 +1,13 @@
+.idea/
+.settings/
+target/
+org.eclipse*.prefs
+*.classpath
+*.project
+*.iml
+*.log
+*.rpm
+
+
+
+
