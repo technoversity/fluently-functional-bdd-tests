@@ -1,7 +1,7 @@
 package org.fluent.bdd.page;
 
 import org.fluent.bdd.utils.Configuration;
-import org.openqa.selenium.WebElement;
+import org.fluentlenium.core.domain.FluentWebElement;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,10 +28,6 @@ public class GooglePage extends AbstractPage {
     }
 
     public void clickFirstLinkInSearchResults() {
-        WebElement webElement = findFirst(".r").getElement();
-        webElement.getTagName();
-        webElement.getText();
-
-        findFirst(".r").getElement().click();
+        findFirst(".r").find("a").get(0).click();
     }
 }

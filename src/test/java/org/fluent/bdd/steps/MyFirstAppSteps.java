@@ -8,6 +8,8 @@ import org.fluent.bdd.page.CucumberPage;
 import org.fluent.bdd.page.GooglePage;
 import org.fluentlenium.adapter.FluentTest;
 
+import java.util.concurrent.TimeUnit;
+
 public class MyFirstAppSteps extends FluentTest {
 
     private GooglePage googlePage = new GooglePage();
@@ -35,6 +37,7 @@ public class MyFirstAppSteps extends FluentTest {
     @Then("^I see the cucumber home page with title (.*)$")
     public void I_see_the_cucumber_home_page_with_title(String title)
             throws Throwable {
+        await().atMost(5, TimeUnit.SECONDS);
         cucumberPage.isAt();
     }
 

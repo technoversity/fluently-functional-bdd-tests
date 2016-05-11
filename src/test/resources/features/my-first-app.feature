@@ -1,4 +1,4 @@
-Feature: Search on Google home page
+Feature: Search for a query on Google home page
 
   Scenario Outline: As a user I can search for cucumber JVM and get to cucumber home page
     Given I am on Google home page
