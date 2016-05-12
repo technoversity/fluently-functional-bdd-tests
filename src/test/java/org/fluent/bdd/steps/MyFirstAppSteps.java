@@ -35,7 +35,7 @@ public class MyFirstAppSteps extends FluentTest {
     @Then("^I see the cucumber home page with title (.*)$")
     public void I_see_the_cucumber_home_page_with_title(String title)
             throws Throwable {
-        //TODO: Improve as for now added some delay for as Firefox page loading taking time.
+        //TODO: For now added some delay to cater for Firefox page loading.
         Thread.sleep(5000);
         cucumberPage.isAt();
     }
