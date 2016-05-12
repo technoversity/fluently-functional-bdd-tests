@@ -17,7 +17,7 @@
 ## Cucumber Tests
 
 - Amend the application.properties file to use the appropriate Web Driver i.e. Firefox, HTMLUnit 
-- Simply run "uk.gov.dwp.rti.spec.RunFunctionalTest" from the IDE or alternatively run "mvn test" from command prompt. 
+- Simply run "org.fluent.bdd.RunFunctionalTest" from the IDE or alternatively run "mvn test" from command prompt. 
 
 ## Running different profile
 - We can specify whether to pick default properties or jenkins by issuing e.g. "-Dactive.profile=jenkins" and the system will 

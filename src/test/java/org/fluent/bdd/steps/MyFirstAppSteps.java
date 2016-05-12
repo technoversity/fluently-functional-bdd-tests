@@ -8,16 +8,14 @@ import org.fluent.bdd.page.CucumberPage;
 import org.fluent.bdd.page.GooglePage;
 import org.fluentlenium.adapter.FluentTest;
 
-import java.util.concurrent.TimeUnit;
-
 public class MyFirstAppSteps extends FluentTest {
 
     private GooglePage googlePage = new GooglePage();
 
     private CucumberPage cucumberPage = new CucumberPage();
 
-    @Given("^I am on Google home page")
-    public void I_am_on_Google_home_page() throws Throwable {
+    @Given("^I navigate to Google home page")
+    public void I_navigate_to_Google_home_page() throws Throwable {
         googlePage.goToSearchPage();
         googlePage.isAt();
     }
@@ -37,7 +35,8 @@ public class MyFirstAppSteps extends FluentTest {
     @Then("^I see the cucumber home page with title (.*)$")
     public void I_see_the_cucumber_home_page_with_title(String title)
             throws Throwable {
-        await().atMost(5, TimeUnit.SECONDS);
+        //TODO: Improve as for now added some delay for as Firefox page loading taking time.
+        Thread.sleep(5000);
         cucumberPage.isAt();
     }
 
